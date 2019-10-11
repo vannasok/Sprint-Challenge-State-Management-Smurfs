@@ -18,6 +18,7 @@ export class App extends Component {
          <div className='App'>
             <h1>SMURFS! 2.0 W/ Redux</h1>
             <CardForm />
+
             <Cards smurfs={this.props.smurfs} />
          </div>
       );
@@ -26,7 +27,7 @@ export class App extends Component {
 
 const mapStateToProps = state => {
    return {
-      smurfs: state.smurf,
+      smurfs: state.smurfs,
       fetchingSmurf: state.fetching
    };
 };

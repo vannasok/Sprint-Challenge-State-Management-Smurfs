@@ -35,7 +35,8 @@
    display: flex;
 
    justify-content: center;
-   flex-wrap: wrap;
+   align-items: center;
+
    width: 100%;
    align-self: center;
 }
@@ -67,4 +68,7 @@ input {
 }
 .card {
    background: #72f9de;
+   width: 100%;
+   padding: 2%;
+   margin: 1%;
 }
