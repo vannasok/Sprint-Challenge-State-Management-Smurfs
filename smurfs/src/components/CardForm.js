@@ -9,7 +9,7 @@ class CardForm extends React.Component {
       height: ''
    };
    handleChange = e => {
-      this.setState({ [e.target.name]: e.target.value });
+      this.setState({ ...this.state, [e.target.name]: e.target.value });
    };
    addNewSmurf = e => {
       e.preventDefault();

@@ -3,6 +3,7 @@ import {
    FETCHING_SUCCESS,
    FETCHING_FAILED,
    ADD_SMURF,
+   ADD_SMURF_SUCCESS,
    ADD_SMURF_FAILED
 } from '../actions';
 
@@ -25,9 +26,19 @@ const reducer = (state = initialState, action) => {
       case ADD_SMURF:
          return {
             ...state,
+
             fetchingSmurf: false,
             addingSmurf: true,
+
             error: 'add smurf error'
+         };
+      case ADD_SMURF_SUCCESS:
+         return {
+            ...state,
+            smurfs: action.payload,
+            fetchingSmurfs: false,
+            addingSmurf: false,
+            error: ''
          };
       case ADD_SMURF_FAILED:
          return {
@@ -41,7 +52,7 @@ const reducer = (state = initialState, action) => {
             ...state,
             fetchingSmurf: true,
             error: '',
-            smurfs: [...state.smurfs, ...action.payload]
+            smurfs: action.payload
          };
       case FETCHING_FAILED:
          return {

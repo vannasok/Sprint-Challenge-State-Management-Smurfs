@@ -6,9 +6,9 @@ export const Cards = ({ smurfs }) => {
          {smurfs.map(smurf => {
             return (
                <div className='card' key={smurf.id}>
-                  <h3>
+                  <p>
                      NAME: <b>{smurf.name}</b>
-                  </h3>
+                  </p>
                   <p>AGE: {smurf.age}</p>
                   <p>HEIGHT: {smurf.height}</p>
                </div>
