@@ -10,8 +10,7 @@ const initialState = {
    smurfs: [],
    fetchingSmurf: false,
    addingSmurf: false,
-   updateSmurf: false,
-   deleteSmurf: false,
+
    error: null
 };
 
